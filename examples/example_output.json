@@ -1,0 +1,462 @@
+{
+  "input": {
+    "original_text": "Tech Giant Apple Announces Major AI Initiative in Silicon Valley\n\nCUPERTINO, California -- Apple Inc. announced today that it will invest $10 billion...",
+    "processed_text": "Tech Giant Apple Announces Major AI Initiative in Silicon Valley Apple Inc announced today that it will invest 10 billion in artificial intelligence research over the next five years..."
+  },
+  "intermediate": {
+    "sentences": [
+      "Tech Giant Apple Announces Major AI Initiative in Silicon Valley",
+      "Apple Inc announced today that it will invest 10 billion in artificial intelligence research over the next five years.",
+      "The initiative, led by CEO Tim Cook, aims to develop advanced AI capabilities for the company's devices and services.",
+      "The project will be headquartered at Apple's new AI research facility in Palo Alto, California, which opened last month.",
+      "Dr Sarah Chen, former Google AI researcher, has been appointed as the Director of AI Strategy to oversee the initiative.",
+      "This investment represents our commitment to pioneering the future of artificial intelligence, said Tim Cook during a press conference at Apple Park.",
+      "We believe AI will fundamentally transform how people interact with technology."
+    ],
+    "entities": [
+      {
+        "text": "Apple",
+        "label": "ORG",
+        "start": 11,
+        "end": 16,
+        "confidence": 1.0
+      },
+      {
+        "text": "Silicon Valley",
+        "label": "GPE",
+        "start": 53,
+        "end": 67,
+        "confidence": 1.0
+      },
+      {
+        "text": "Apple Inc",
+        "label": "ORG",
+        "start": 85,
+        "end": 94,
+        "confidence": 1.0
+      },
+      {
+        "text": "$10 billion",
+        "label": "MONEY",
+        "start": 128,
+        "end": 139,
+        "confidence": 1.0
+      },
+      {
+        "text": "Tim Cook",
+        "label": "PERSON",
+        "start": 224,
+        "end": 232,
+        "confidence": 1.0
+      },
+      {
+        "text": "Palo Alto",
+        "label": "GPE",
+        "start": 378,
+        "end": 387,
+        "confidence": 1.0
+      },
+      {
+        "text": "California",
+        "label": "GPE",
+        "start": 389,
+        "end": 399,
+        "confidence": 1.0
+      },
+      {
+        "text": "Dr Sarah Chen",
+        "label": "PERSON",
+        "start": 428,
+        "end": 441,
+        "confidence": 1.0
+      },
+      {
+        "text": "Google",
+        "label": "ORG",
+        "start": 450,
+        "end": 456,
+        "confidence": 1.0
+      }
+    ],
+    "triples": [
+      {
+        "subject": "Apple",
+        "predicate": "ANNOUNCES",
+        "object": "AI Initiative",
+        "confidence": 0.9,
+        "type": "entity_relation",
+        "source_sentence": "Tech Giant Apple Announces Major AI Initiative in Silicon Valley",
+        "metadata": {
+          "extraction_method": "pattern",
+          "pattern": "(.+?)\\s+(announces|announced)\\s+(.+)"
+        }
+      },
+      {
+        "subject": "Apple Inc",
+        "predicate": "INVESTS",
+        "object": "$10 billion",
+        "confidence": 0.8,
+        "type": "entity_relation",
+        "source_sentence": "Apple Inc announced today that it will invest $10 billion in artificial intelligence research over the next five years.",
+        "metadata": {
+          "extraction_method": "dependency",
+          "verb_pos": 7
+        }
+      },
+      {
+        "subject": "Tim Cook",
+        "predicate": "LEADS",
+        "object": "initiative",
+        "confidence": 0.8,
+        "type": "entity_relation",
+        "source_sentence": "The initiative, led by CEO Tim Cook, aims to develop advanced AI capabilities for the company's devices and services.",
+        "metadata": {
+          "extraction_method": "pattern",
+          "pattern": "(.+?)\\s+(led by|leads)\\s+(.+)"
+        }
+      },
+      {
+        "subject": "Tim Cook",
+        "predicate": "IS_A",
+        "object": "CEO",
+        "confidence": 0.9,
+        "type": "entity_relation",
+        "source_sentence": "The initiative, led by CEO Tim Cook, aims to develop advanced AI capabilities for the company's devices and services.",
+        "metadata": {
+          "extraction_method": "pattern",
+          "pattern": "(.+?)\\s+(is|was|are|were)\\s+(.+)"
+        }
+      },
+      {
+        "subject": "project",
+        "predicate": "LOCATED_IN",
+        "object": "Palo Alto",
+        "confidence": 0.7,
+        "type": "spatial_relation",
+        "source_sentence": "The project will be headquartered at Apple's new AI research facility in Palo Alto, California, which opened last month.",
+        "metadata": {
+          "extraction_method": "pattern",
+          "pattern": "(.+?)\\s+(in|at|from|to)\\s+(.+)"
+        }
+      },
+      {
+        "subject": "Dr Sarah Chen",
+        "predicate": "WORKS_FOR",
+        "object": "Google",
+        "confidence": 0.8,
+        "type": "entity_relation",
+        "source_sentence": "Dr Sarah Chen, former Google AI researcher, has been appointed as the Director of AI Strategy to oversee the initiative.",
+        "metadata": {
+          "extraction_method": "entity_relation",
+          "entity1_type": "PERSON",
+          "entity2_type": "ORG"
+        }
+      },
+      {
+        "subject": "Dr Sarah Chen",
+        "predicate": "APPOINTED_AS",
+        "object": "Director of AI Strategy",
+        "confidence": 0.9,
+        "type": "entity_relation",
+        "source_sentence": "Dr Sarah Chen, former Google AI researcher, has been appointed as the Director of AI Strategy to oversee the initiative.",
+        "metadata": {
+          "extraction_method": "pattern",
+          "pattern": "(.+?)\\s+(appointed as|appointed|named)\\s+(.+)"
+        }
+      }
+    ]
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": "node_a1b2c3d4",
+        "label": "Apple",
+        "properties": {
+          "normalized_text": "apple",
+          "original_text": "Apple",
+          "created_from": "triple_extraction"
+        },
+        "type": "Organization"
+      },
+      {
+        "id": "node_e5f6g7h8",
+        "label": "Tim Cook",
+        "properties": {
+          "normalized_text": "tim cook",
+          "original_text": "Tim Cook",
+          "created_from": "triple_extraction"
+        },
+        "type": "Person"
+      },
+      {
+        "id": "node_i9j0k1l2",
+        "label": "AI Initiative",
+        "properties": {
+          "normalized_text": "ai initiative",
+          "original_text": "AI Initiative",
+          "created_from": "triple_extraction"
+        },
+        "type": "Event"
+      },
+      {
+        "id": "node_m3n4o5p6",
+        "label": "$10 billion",
+        "properties": {
+          "normalized_text": "10 billion",
+          "original_text": "$10 billion",
+          "created_from": "triple_extraction"
+        },
+        "type": "Financial"
+      },
+      {
+        "id": "node_q7r8s9t0",
+        "label": "Palo Alto",
+        "properties": {
+          "normalized_text": "palo alto",
+          "original_text": "Palo Alto",
+          "created_from": "triple_extraction"
+        },
+        "type": "Location"
+      },
+      {
+        "id": "node_u1v2w3x4",
+        "label": "Dr Sarah Chen",
+        "properties": {
+          "normalized_text": "dr sarah chen",
+          "original_text": "Dr Sarah Chen",
+          "created_from": "triple_extraction"
+        },
+        "type": "Person"
+      },
+      {
+        "id": "node_y5z6a7b8",
+        "label": "Google",
+        "properties": {
+          "normalized_text": "google",
+          "original_text": "Google",
+          "created_from": "triple_extraction"
+        },
+        "type": "Organization"
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge_12345678",
+        "source": "node_a1b2c3d4",
+        "target": "node_i9j0k1l2",
+        "relationship": "ANNOUNCES",
+        "properties": {
+          "confidence": 0.9,
+          "triple_type": "entity_relation",
+          "sources": [
+            {
+              "sentence": "Tech Giant Apple Announces Major AI Initiative in Silicon Valley",
+              "confidence": 0.9,
+              "metadata": {
+                "extraction_method": "pattern",
+                "pattern": "(.+?)\\s+(announces|announced)\\s+(.+)"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "edge_87654321",
+        "source": "node_a1b2c3d4",
+        "target": "node_m3n4o5p6",
+        "relationship": "INVESTS",
+        "properties": {
+          "confidence": 0.8,
+          "triple_type": "entity_relation",
+          "sources": [
+            {
+              "sentence": "Apple Inc announced today that it will invest $10 billion in artificial intelligence research over the next five years.",
+              "confidence": 0.8,
+              "metadata": {
+                "extraction_method": "dependency",
+                "verb_pos": 7
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "edge_11223344",
+        "source": "node_e5f6g7h8",
+        "target": "node_i9j0k1l2",
+        "relationship": "LEADS",
+        "properties": {
+          "confidence": 0.8,
+          "triple_type": "entity_relation",
+          "sources": [
+            {
+              "sentence": "The initiative, led by CEO Tim Cook, aims to develop advanced AI capabilities for the company's devices and services.",
+              "confidence": 0.8,
+              "metadata": {
+                "extraction_method": "pattern",
+                "pattern": "(.+?)\\s+(led by|leads)\\s+(.+)"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "edge_55667788",
+        "source": "node_u1v2w3x4",
+        "target": "node_y5z6a7b8",
+        "relationship": "WORKS_FOR",
+        "properties": {
+          "confidence": 0.8,
+          "triple_type": "entity_relation",
+          "sources": [
+            {
+              "sentence": "Dr Sarah Chen, former Google AI researcher, has been appointed as the Director of AI Strategy to oversee the initiative.",
+              "confidence": 0.8,
+              "metadata": {
+                "extraction_method": "entity_relation",
+                "entity1_type": "PERSON",
+                "entity2_type": "ORG"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "neo4j": {
+      "nodes": [
+        {
+          "id": "node_a1b2c3d4",
+          "labels": ["Organization"],
+          "properties": {
+            "name": "Apple",
+            "normalized_text": "apple",
+            "original_text": "Apple",
+            "created_from": "triple_extraction"
+          }
+        },
+        {
+          "id": "node_e5f6g7h8",
+          "labels": ["Person"],
+          "properties": {
+            "name": "Tim Cook",
+            "normalized_text": "tim cook",
+            "original_text": "Tim Cook",
+            "created_from": "triple_extraction"
+          }
+        }
+      ],
+      "relationships": [
+        {
+          "id": "edge_12345678",
+          "startNode": "node_a1b2c3d4",
+          "endNode": "node_i9j0k1l2",
+          "type": "ANNOUNCES",
+          "properties": {
+            "confidence": 0.9,
+            "triple_type": "entity_relation"
+          }
+        }
+      ]
+    },
+    "summary": {
+      "central_nodes": [
+        {
+          "id": "node_a1b2c3d4",
+          "label": "Apple",
+          "type": "Organization",
+          "degree": 3
+        },
+        {
+          "id": "node_e5f6g7h8",
+          "label": "Tim Cook",
+          "type": "Person",
+          "degree": 2
+        },
+        {
+          "id": "node_i9j0k1l2",
+          "label": "AI Initiative",
+          "type": "Event",
+          "degree": 2
+        }
+      ],
+      "avg_node_degree": 1.86,
+      "max_degree": 3,
+      "connected_components": 1
+    },
+    "metadata": {
+      "total_nodes": 7,
+      "total_edges": 4,
+      "node_types": {
+        "Organization": 2,
+        "Person": 2,
+        "Event": 1,
+        "Financial": 1,
+        "Location": 1
+      },
+      "relationship_types": {
+        "ANNOUNCES": 1,
+        "INVESTS": 1,
+        "LEADS": 1,
+        "WORKS_FOR": 1
+      }
+    },
+    "statistics": {
+      "nodes_created": 7,
+      "edges_created": 4,
+      "nodes_merged": 0,
+      "triples_processed": 7
+    }
+  },
+  "metadata": {
+    "processing_time": 2.45,
+    "statistics": {
+      "text": {
+        "character_count": 1247,
+        "word_count": 203,
+        "sentence_count": 7,
+        "avg_sentence_length": 29.0
+      },
+      "entities": {
+        "total": 9,
+        "types": {
+          "ORG": 3,
+          "PERSON": 2,
+          "GPE": 3,
+          "MONEY": 1
+        },
+        "entities_per_sentence": 1.29
+      },
+      "triples": {
+        "total": 7,
+        "avg_confidence": 0.83,
+        "types": {
+          "entity_relation": 6,
+          "spatial_relation": 1
+        },
+        "predicates": {
+          "ANNOUNCES": 1,
+          "INVESTS": 1,
+          "LEADS": 1,
+          "IS_A": 1,
+          "LOCATED_IN": 1,
+          "WORKS_FOR": 1,
+          "APPOINTED_AS": 1
+        },
+        "unique_subjects": 5,
+        "unique_objects": 6,
+        "unique_entities": 8
+      },
+      "graph": {
+        "nodes_created": 7,
+        "edges_created": 4,
+        "nodes_merged": 0,
+        "triples_processed": 7
+      },
+      "performance": {
+        "processing_time": 2.45,
+        "sentences_per_second": 2.86,
+        "triples_per_sentence": 1.0
+      }
+    }
+  }
+} 
